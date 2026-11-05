@@ -12,7 +12,7 @@ Una carcasa impresa en 3D para EvilDoggie: el perro a la vista, los controles al
 
 En la **EKOparty 2026, en Argentina**, los amigos de **Faraday** nos regalaron un EvilDoggie. Al regresar a Guatemala, una idea se vino con nosotros: un hardware tan bonito debía tener una casa para cuidarlo.
 
-Lo trabajamos en el taller de **Kranken Tres D**, donde modelamos esta carcasa para proteger la placa sin esconder su diseño ni perder acceso a sus conexiones. Hoy compartimos los archivos con la comunidad para que cualquiera pueda imprimirla, ensamblarla y aportar mejoras.
+Lo trabajamos en el taller de **Kraken Tres D**, donde modelamos esta carcasa para proteger la placa sin esconder su diseño ni perder acceso a sus conexiones. Hoy compartimos los archivos con la comunidad para que cualquiera pueda imprimirla, ensamblarla y aportar mejoras.
 
 Gracias a los amigos de Faraday por el regalo que dio origen al proyecto, y a quienes comparten conocimiento, hardware y horas de taller. Esta casita también es para ustedes.
 
