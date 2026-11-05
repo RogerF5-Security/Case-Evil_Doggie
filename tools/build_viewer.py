@@ -2,8 +2,21 @@
 Requires the CAD requirements only. No browser/library/CDN dependencies at runtime.
 """
 from pathlib import Path
-import sys,json,base64,io,copy
+import sys,json,base64,io,copy,argparse,re
 ROOT=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--reuse-scene',action='store_true',help='Refresh only HTML using the existing embedded geometry; no CAD dependencies required.')
+args=parser.parse_args()
+if args.reuse_scene:
+    output=ROOT/'viewer/index.html'
+    match=re.search(r'<script type="application/json" id="scene">(.*?)</script>',output.read_text(encoding='utf-8'),re.S)
+    if not match: raise SystemExit('Existing scene missing; rebuild the viewer from CAD first.')
+    scene=json.loads(match.group(1))
+    template=(ROOT/'viewer/template.html').read_text(encoding='utf-8')
+    if template.count('__SCENE__')!=1: raise SystemExit('Expected one scene placeholder.')
+    output.write_text(template.replace('__SCENE__',match.group(1)),encoding='utf-8',newline='\n')
+    print(json.dumps(dict(viewer=str(output),parts=len(scene['parts']),geometry='preserved')))
+    raise SystemExit(0)
 DEV=ROOT.parents[1]/'work/cad_deps'
 if DEV.exists():sys.path.insert(0,str(DEV))
 sys.path.insert(0,str(ROOT/'cad'))

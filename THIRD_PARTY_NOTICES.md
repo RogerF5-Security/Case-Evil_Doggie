@@ -18,7 +18,7 @@ trademark license or certification of the accessory.
 
 ## Fonts and generated geometry
 
-Interior RogerF5 geometry is generated from DejaVu Sans Bold using Matplotlib.
+Interior workshop-mark geometry is generated from DejaVu Sans Bold using Matplotlib.
 The STL/3MF contains outline geometry, not font software. No font files are
 redistributed in the repository. PDF output embeds subsets of DejaVu fonts
 available through the build environment; DejaVu fonts use their upstream license:
@@ -26,7 +26,7 @@ https://dejavu-fonts.github.io/License.html
 
 ## Prototype photographs
 
-Three photos in `docs/photos/` were supplied by RogerF5 to document v1 fit issues.
+Three photos in `docs/photos/` document fit checks performed on an earlier workshop prototype.
 They depict the prototype, not a printed/validated revision 2. Generated CAD
 screenshots in `docs/images/` depict revision 2 and are labelled accordingly.
 

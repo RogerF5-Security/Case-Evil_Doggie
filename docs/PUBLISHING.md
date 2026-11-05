@@ -1,55 +1,22 @@
-# Subir el proyecto a Git
+# Sitio y mantenimiento
 
-El paquete es un repositorio local preparado; no se ha publicado ni enviado a terceros.
-`README.md` será la portada de GitHub. Elegir el nombre que se desee para el repositorio;
-propuesta: `doggie-house`.
+El repositorio público es [Case-Evil_Doggie](https://github.com/RogerF5-Security/Case-Evil_Doggie). La portada es `README.md` y el sitio es [Doggie House](https://rogerf5-security.github.io/Case-Evil_Doggie/).
 
-## Antes del primer push
+## GitHub Pages
 
-Revisar [la validación física](RELEASE_CHECKLIST.md). Se puede subir esta revisión
-para colaboración como `2.0.0-rc1`, indicando las pruebas pendientes. No presentarla
-como v2 impresa hasta completar la comprobación. Las fotografías incluidas son v1.
+El sitio se sirve desde la rama `main`, carpeta `/ (root)`. `index.html` presenta el proyecto y el ensamblaje; `viewer/index.html` contiene el visor completo, incluida su geometría y arte de referencia. `.nojekyll` permite servir los archivos estáticos directamente.
 
-Revisar créditos y licencia MIT propuesta para la carcasa. El texto de presentación
-se puede tomar del README. El arte original mantiene su atribución Faraday/Kalpa.
+En **Settings → Pages**, seleccionar **Deploy from a branch → main → / (root)**. La publicación de contenido nuevo sigue los commits de esa rama. No se necesitan cuentas externas, claves API ni CDN para el visor.
 
-## Terminal
+## Actualizar la documentación
 
-Desde la carpeta del proyecto, con Git instalado y un repositorio remoto vacío
-creado en la cuenta elegida:
+1. Mantener alineados `README.md`, la portada HTML y las guías ES/EN.
+2. Editar `viewer/template.html` y ejecutar `python tools/build_viewer.py --reuse-scene` para actualizar la interfaz sin regenerar la geometría.
+3. Regenerar el PDF y la portada con `python tools/build_guide.py` después de instalar `requirements-docs.txt`.
+4. Ejecutar `python tools/package_release.py` para actualizar las sumas y comprobar los enlaces y el paquete.
 
-```sh
-git status
-# Si se parte del ZIP, inicializar primero: git init -b main
-git add .
-git commit -m "Add Doggie House v2 release candidate"
-# Sustituir por la URL real del repositorio creado por el propietario:
-git remote add origin URL_DEL_REPOSITORIO
-git push -u origin main
-```
+## Revisiones del modelo
 
-El repositorio local no incorpora email o credenciales inventados. Git usará la
-identidad que tenga configurada el propietario. Nunca añadir `.venv`, cachés o G-code.
+La primera edición pública es **1.0.0**. El identificador interno `2.0.0-rc1` corresponde a la geometría conservada del taller. Un cambio editorial no requiere modificar ni volver a exportar los STL.
 
-## Visor público con GitHub Pages
-
-En la configuración del repositorio, Pages, elegir despliegue desde rama `main`,
-carpeta `/ (root)`. El archivo `.nojekyll` evita procesamiento de las fuentes.
-La página raíz dirige al visor `viewer/index.html`. El HTML ya incluye su geometría
-y no necesita servicios externos. No se habilitó Pages automáticamente.
-
-El flujo `.github/workflows/cad.yml` valida CAD en push y pull request y guarda
-STL/3MF/visor como artefactos; no publica una web ni envía mensajes a Faraday.
-
-## Entrega a Faraday
-
-Compartir el enlace al repositorio o el ZIP después de revisarlo. Una presentación
-breve puede decir:
-
-> De un viaje a la EKO nos trajimos un EvilDoggie que nos regaló el equipo de
-> Faraday. De regreso a Guate le hicimos su casita para cuidarlo como se debe.
-> Aquí va Doggie House: perro visible, puertos accesibles y cierre sin tornillos.
-> Gracias por el regalo y por ayudarnos a compartirlo con la comunidad.
-
-Si se comparte antes de la segunda impresión, adjuntar el estado `rc1` y las pruebas
-pendientes. Este borrador no se ha enviado.
+Para cambios mecánicos, seguir [CONTRIBUTING.md](../CONTRIBUTING.md), regenerar modelos y visor juntos, y registrar las comprobaciones digitales y físicas por separado.

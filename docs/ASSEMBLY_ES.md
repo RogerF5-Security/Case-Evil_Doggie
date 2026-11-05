@@ -2,7 +2,7 @@
 
 [Volver al proyecto](../README.md) · [PDF ilustrado](GUIA_MONTAJE_ES.pdf) · [English](ASSEMBLY_EN.md)
 
-Revisión v2.0.0-rc1. Unidades: milímetros. Cierre liberable sin tornillos.
+Primera edición comunitaria. Unidades: milímetros. Cierre liberable sin tornillos.
 
 ![Piezas separadas](images/exploded.png)
 
@@ -29,7 +29,7 @@ de servicio. No imprimir las dos tapas para un mismo conjunto.
 - El **marco** se imprime sobre su cara exterior plana. Las cuatro pestañas suben
   hacia arriba; no tumbar el marco sobre una pestaña.
 - La **tapa** se imprime con la cara exterior sobre la cama y el interior hacia arriba.
-  Esto deja RogerF5 a la vista al terminar. El grabado es geometría del STL.
+  El interior queda hacia arriba. Revisar los detalles en el laminador.
 - Los **pulsadores** se imprimen de pie sobre su extremo de 4 mm, con un pequeño brim.
 - Las piezas se orientan como muestran los STL y los 3MF. No usar soportes que
   se fusionen con las pestañas, sus canales o las guías de botones.
@@ -38,7 +38,7 @@ de servicio. No imprimir las dos tapas para un mismo conjunto.
 - No activar planchado o procesos que rellenen el grabado. No reducir globalmente
   la escala para compensar un cierre duro: ajustar la holgura del parámetro.
 
-Estos son valores de partida del diseño, no un perfil ya ensayado de v2.
+Estos son valores de partida; ajustar el perfil a la impresora y al filamento.
 
 ## 3. Probar los cambios con poca pieza
 
@@ -52,10 +52,7 @@ Estos son valores de partida del diseño, no un perfil ya ensayado de v2.
    Es una muestra de la abertura, no un soporte que deba colgarse del conector.
    Presentar el cable sin hacer palanca. La carcasa completa confirma su posición
    absoluta; el cupón por sí solo no registra el largo de toda la placa.
-4. Imprimir `12` para comprobar la lectura real de **RogerF5** en la misma orientación
-   y material de la tapa. Si el perfil redondea las letras, corregir flujo/ancho de
-   línea o aumentar `signature_height` antes de imprimir la pieza completa.
-5. Las plantillas `05` y `06` permiten comprobar placa y controles si se usa otra revisión.
+4. Las plantillas `05` y `06` permiten comprobar placa y controles si se usa otra revisión.
    El cupón `07` ofrece orificios Ø 2,5 / 2,7 / 3,0 / 4,6 / 6,4 mm, de izquierda a derecha.
 
 ## 4. Colocar la ventana opcional
@@ -80,7 +77,7 @@ los componentes o el puerto.
 Si se eligió tapa `02`, introducir cada pulsador desde dentro: extremo estrecho
 hacia fuera, pestaña de retención hacia dentro. Comprobar su movimiento libre.
 BOOT corresponde al agujero superior y RESET al inferior, junto a la palanca.
-Su posición se conserva de v1. La altura de referencia del botón es 1,5 mm;
+La altura de referencia del botón es 1,5 mm;
 la varilla deja una holgura nominal de 0,35 mm, que debe comprobarse en la placa real.
 Si al cerrar se pulsa un botón continuamente, abrir y corregir la longitud.
 
@@ -115,8 +112,7 @@ La muestra `08` + `09` permite practicar el gesto antes del montaje completo.
 - DB9 se conecta y sus fijaciones siguen accesibles; se alcanzan las borneras.
 - La placa no se curva; la lámina opcional no toca LEDs ni componentes.
 - Las 14 ranuras traseras y las 8 laterales están despejadas.
-- RogerF5 se lee desde el interior al abrir.
 
 Registrar el resultado en [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
-La corrección USB de 2 mm y el cierre nuevo necesitan esta comprobación física
-antes de etiquetar la revisión como v2.0.0 validada.
+El ajuste del USB y el cierre necesitan comprobarse en la placa y la impresión reales.
+Los archivos conservan su revisión interna de taller; esta guía acompaña la primera publicación comunitaria.

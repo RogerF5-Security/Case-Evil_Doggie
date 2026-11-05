@@ -22,6 +22,10 @@ for part in scene['parts']:
     assert len(raw)>0 and len(raw)%(8*3*4)==0
     assert all(abs(v)<1e6 for v in struct.unpack('<'+'f'*(len(raw)//4),raw))
 assert '__SCENE__' not in html
+template=(ROOT/'viewer/template.html').read_text(encoding='utf-8')
+assert html==template.replace('__SCENE__',match.group(1)),'Viewer template stale'
+publication=json.loads((ROOT/'publication.json').read_text(encoding='utf-8'))
+assert publication['geometry_revision']==p['version'],'Publication geometry revision mismatch'
 assert not re.search(r'<script[^>]+src=',html,re.I),'Viewer must work offline'
 assert len(list((ROOT/'models/stl').glob('*.stl')))==12
 assert len(list((ROOT/'models').glob('*.3mf')))==2

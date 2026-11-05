@@ -14,7 +14,7 @@ layers, 4 walls and 20% infill, using your actual filament profile. The exterior
 faces of frame and cover sit on the bed; the frame latches stand upward.
 Print buttons upright on their 4 mm tips with a brim. Inspect small bridges
 and remove any support/reburrs that could block the latches or buttons.
-These are design starting settings, not a physically validated v2 slicing preset.
+These are starting settings; adjust the profile to your printer and filament.
 
 ## First fit checks
 
@@ -23,7 +23,7 @@ and releases by pressing inward, without whitening or cracking the root.
 USB coupons `10` + `11` reproduce the actual opening; align their joint with
 the board's component-side surface. They test local clearance, not the absolute
 position along the whole board. Do not hang or lever them from the connector.
-Print `12` to check RogerF5 engraving. Templates `05` / `06` check PCB and controls.
+Templates `05` / `06` check PCB and controls.
 Coupon `07` holes, left to right: 2.5 / 2.7 / 3.0 / 4.6 / 6.4 mm.
 
 ## Assembly

@@ -22,7 +22,7 @@ the assembled case thickness.
 
 ## PCB support and closure
 
-User measurements: 70 × 100 × 2 PCB, four Ø 3 holes with 2.2 mm edge-to-edge gap,
+Reference board measurements: 70 × 100 × 2 PCB, four Ø 3 holes with 2.2 mm edge-to-edge gap,
 so hole centres are (3.7,3.7), (66.3,3.7), (3.7,96.3), (66.3,96.3).
 Ø 2.5 pins locate the board. Upper corner pads leave 0.1 mm nominal axial space,
 with relief for the pin ends. Closure load goes through the perimeter joint,
@@ -43,9 +43,9 @@ bay dimensions are defined in `latch_bay`; hook geometry is in `latch`.
 
 ## USB correction
 
-The original user measurement was the 10 mm port width, with its lower edge
+The reference measurement was the 10 mm port width, with its lower edge
 at Y = 30, giving nominal centre Y = 35. Feedback on the printed prototype asked
-to lower the case opening through its thickness. No exact offset was supplied.
+to lower the case opening through its thickness. The exact physical offset was not measured.
 
 The v2 starting correction is **2 mm extra opening at the lower edge**, from
 Z = 7.4 to 5.4, preserving the upper edge at Z = 16.0. Inner width is 12.6.
@@ -74,7 +74,7 @@ only; it is not a measured change in airflow or operating temperature.
 
 ## Signature and controls
 
-All exterior text was removed. `RogerF5` is engraved from the interior roof,
+All exterior text was removed. The existing workshop mark is engraved from the interior roof,
 0.5 mm deep. It is mirrored in component-side XY so it reads normally when
 viewed into the open cover. Bold glyphs are normalized to 5.2 mm height and
 expanded by 0.12 mm, giving approximately 5.44 mm actual height. Roof remaining
@@ -82,7 +82,7 @@ under the engraving is 1.9 mm. A roof patch is exported as a print coupon.
 
 BOOT (63.6,22.6), RESET (63.3,13.6), toggle centre (35,14) and terminal positions
 were estimated from the original board photos; they are preserved from v1.
-The 18 × 25 toggle opening was confirmed by the user. The printed prototype
+The 18 × 25 toggle opening was used for the prototype. The printed prototype
 shows accessible controls, but button rod preload must still be checked.
 
 ## Validation boundaries

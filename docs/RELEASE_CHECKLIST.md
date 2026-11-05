@@ -1,6 +1,7 @@
-# Validación física para v2.0.0
+# Registro de ajuste de una impresión
 
-Estado al preparar el paquete: **pendiente de una impresión de v2.0.0-rc1**.
+Estado de la geometría compartida: **comprobación física pendiente**.
+Edición comunitaria 1.0.0; revisión interna de CAD 2.0.0-rc1.
 No marcar estas casillas por el resultado del CAD o por las fotografías de v1.
 
 Datos de la prueba:
@@ -26,7 +27,6 @@ Datos de la prueba:
 - [ ] BOOT y RESET regresan libres; ningún botón permanece activado.
 - [ ] Placa apoyada en las cuatro esquinas, sin flexión forzada.
 - [ ] Ventana opcional fijada y separada de LED/componentes.
-- [ ] Firma RogerF5 legible en la muestra y en la tapa real.
 - [ ] Ventilación libre; registrar temperatura si se evalúa, con carga y ambiente descritos.
 - [ ] Fotos del conjunto v2, del USB conectado y del interior añadidas al repositorio.
 

@@ -1,11 +1,11 @@
-# Del prototipo a la revisión 2
+# Prototipo de taller
 
-Estas fotografías son de **v1 impresa por RogerF5**. Los renders y el visor
-muestran **v2 CAD**, cuya impresión aún debe comprobarse.
+Estas fotografías documentan un **prototipo anterior de taller**. Los renders y
+el visor muestran la geometría compartida, cuya impresión aún debe comprobarse.
 
 | Observación del prototipo | Cambio en v2 |
 |---|---|
-| Letras exteriores poco legibles | Se retiran todas; solo queda RogerF5 grande por dentro |
+| Letras exteriores poco legibles | Se retiran todas; se conserva la geometría interior existente |
 | USB demasiado justo por su borde inferior | Recorte más ancho y 2 mm de rebaje adicional propuesto |
 | Tornillos largos difíciles de conseguir | Eliminados: cierre con cuatro pestañas liberables |
 | Ventilación insuficiente | Rejilla posterior de 14 ranuras + 8 laterales pasantes |

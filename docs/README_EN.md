@@ -1,55 +1,49 @@
 # Doggie House
 
-**Born on a trip to EKO. Built back home in Guatemala.**
+**Hardware this beautiful deserves a home.**
 
-[Español](../README.md) · [Assembly](ASSEMBLY_EN.md) · [Offline 3D viewer](../viewer/index.html)
+[Español](../README.md) · [3D viewer and assembly](https://rogerf5-security.github.io/Case-Evil_Doggie/) · [STL files](../models/stl/) · [Assembly guide](ASSEMBLY_EN.md)
 
-On a trip to EKO, the Faraday team gave us an EvilDoggie. Back in Guatemala,
-we built a little house to take care of it: keep the original dog artwork and
-LEDs visible, protect the board and leave its connections accessible.
-The first printed prototype revealed several practical fixes. This second
-revision brings them together for the community, with thanks to Faraday and Kalpa.
+At **EKOparty 2026 in Argentina**, our friends at **Faraday** gave us an EvilDoggie. Back in Guatemala, we took it to the **Kranken Tres D** workshop and designed a case to protect the board while keeping its artwork, LEDs, connectors and controls accessible.
 
-Designed by **RogerF5**. This is a community enclosure for the original hardware,
-not a replacement for the [Faraday Doggie repository](https://github.com/infobyte/doggie).
+This first community publication shares the printable files so anyone can build a little house for their EvilDoggie and help improve it. Thank you to Faraday for the gift that started this project, and to the community that keeps sharing tools and ideas.
 
-![Front and component cover](images/cover.png)
+![Front frame and control cover](images/cover.png)
 
-## Revision 2
+## Print a case
 
-- Four releasable PETG snap latches; no screws, nuts or inserts.
-- USB opening extended 2 mm at its lower edge through the case thickness,
-  preserving the upper edge; larger cable-overmould relief. Board-axis Y remains 35 mm.
-- Exterior lettering removed. **RogerF5** engraved inside, approximately 5.4 mm high and 0.5 mm deep.
-- 14 roof vents and 8 actual side vents. Roof open area is 2.46 times v1;
-  cooling performance has not been measured.
-- Original PCB holes locate the board on Ø 2.5 mm pins. No board drilling.
-- Open dog window; optional cut 1 mm transparent sheet.
+| Configuration | Files |
+|---|---|
+| Captive printed buttons | STL `01` + `02` + `03`, or [standard 3MF](../models/doggie-house-standard.3mf) |
+| Direct access to original buttons | STL `01` + `04`, or [direct-access 3MF](../models/doggie-house-direct-access.3mf) |
+| Check the snap fit first | STL `08` + `09` |
+| Check the USB opening | STL `10` + `11` |
 
-Case: **80 × 110 × 27.8 mm**. Reference PCB: **70 × 100 × 2 mm**, maximum component height 15 mm.
+Find all [STL files here](../models/stl/). Import at **100% in millimetres**. The 3MF files contain oriented geometry; choose your own printer and filament profile.
 
-Print the standard [3MF geometry layout](../models/doggie-house-standard.3mf),
-or STL `01` + `02` + `03`. Direct-button-access alternative: `01` + `04`.
-STLs and 3MF layouts are pre-oriented in millimetres and contain no printer
-profile or G-code. Suggested starting setup: unfilled PETG, 0.4 mm nozzle,
-0.20 mm layers, 4 walls, 20% infill; use the filament's actual profile.
-Check the latch coupon `08` + `09` before printing the complete case.
+Start with unfilled PETG, a 0.4 mm nozzle, 0.20 mm layers, 4 walls and 20% infill. Place frame and cover exterior faces on the bed; print button rods upright with a brim. Test the latch coupons with the final material before printing the entire case.
 
-**v2.0.0-rc1 / 2026-11-04:** v1 was physically printed. The revised geometry has
-passed digital checks, including latch engagement and nominal tip travel.
-The exact USB displacement was not measured; the 2 mm relief is a proposed
-correction. Physical fit, latch force/fatigue, button operation and signature
-legibility still need to be checked on v2. Do not mix v1 and v2 halves.
+## Put it together
 
-Open `viewer/index.html` locally for the standalone WebGL viewer. No CDN or
-Internet connection is required. Case parts come from the actual printable CAD;
-PCB graphics and electronic components are visual references.
+1. Disconnect the board. Remove burrs and supports from latch channels and ports.
+2. Optionally fit a 1 mm clear sheet using the [1:1 window template](window-template-1to1.svg).
+3. Place the board dog-side toward the front window, DB9 toward the top, resting on all four locating pins.
+4. For the standard cover, insert the two button rods from inside, narrow ends outward. Check free movement.
+5. Align ports and the perimeter joint. Press near the edges until all four hooks engage.
+6. Check USB/DB9 access, full GOOD / EVIL travel and BOOT / RESET return.
 
-To rebuild: install `requirements.txt`, run `python cad/build.py`, then
-`python tools/build_viewer.py` and `python tools/check_release.py`.
-Change values in `cad/parameters.json`; do not scale an STL to reposition USB.
+To open, disconnect cables and press one side's two hooks inward through their release windows. Lift that edge slightly, release the other side, then lift the cover straight off. See the [detailed assembly guide](ASSEMBLY_EN.md).
 
-See [assembly](ASSEMBLY_EN.md), [design notes](DESIGN_NOTES.md),
-[physical release checklist](RELEASE_CHECKLIST.md) and [contributing](../CONTRIBUTING.md).
-New enclosure source: [MIT](../LICENSE). Faraday/Kalpa art and hardware credited
-in [third-party notices](../THIRD_PARTY_NOTICES.md).
+## Size and fit
+
+Case: **80 × 110 × 27.8 mm**, excluding button protrusions. Reference PCB: **70 × 100 × 2 mm**. Four snap latches hold the cover without metal fasteners. An open front preserves the dog artwork; a clear sheet is optional.
+
+This is community publication **1.0.0**, sharing the existing STL/3MF geometry unchanged. The CAD's internal workshop revision remains `2.0.0-rc1`. Digital checks are recorded in [validation.json](validation.json); physical USB fit, PETG latch behaviour and button operation need checking on the actual print. [Prototype photos](PROTOTYPE_FEEDBACK.md) show an earlier build. No impact, thermal or fatigue tests are claimed.
+
+The self-contained [HTML viewer](../viewer/index.html) also works offline in a WebGL browser. Case geometry is the printable CAD; the PCB and components are visual references.
+
+## Community and credits
+
+Share print photos, board revision, material and measured fit through issues or pull requests. See [contributing](../CONTRIBUTING.md) and [technical notes](DESIGN_NOTES.md).
+
+Case modelling: **Kranken Tres D** and Doggie House contributors. Original hardware and art: [Faraday / Kalpa](https://github.com/infobyte/doggie). Case and documentation: [MIT](../LICENSE); [third-party notices](../THIRD_PARTY_NOTICES.md).

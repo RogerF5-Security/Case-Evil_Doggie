@@ -1,0 +1,27 @@
+name: CAD validation
+on:
+  push:
+    paths: ['cad/**', 'tools/**', 'requirements*.txt', '.github/workflows/cad.yml']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -r requirements.txt
+      - run: python cad/build.py
+      - run: python tools/build_viewer.py
+      - run: python tools/check_release.py --skip-checksums
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: doggie-house-geometry
+          path: |
+            models/
+            docs/validation.json
+            viewer/index.html

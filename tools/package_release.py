@@ -15,7 +15,7 @@ for q in sources():
 manifest='\n'.join(hashlib.sha256(q.read_bytes()).hexdigest()+'  '+q.relative_to(ROOT).as_posix() for q in sources())+'\n'
 (ROOT/'SHA256SUMS.txt').write_bytes(manifest.encode('ascii'))
 subprocess.run([sys.executable,str(ROOT/'tools/check_release.py')],check=True)
-version=json.loads((ROOT/'cad/parameters.json').read_text(encoding='utf-8'))['version']
+version=json.loads((ROOT/'publication.json').read_text(encoding='utf-8'))['version']
 dest=ROOT.parent/f'Doggie_House_v{version}_Git.zip'
 with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED,compresslevel=8) as z:
     for q in [*sources(),ROOT/'SHA256SUMS.txt']:z.write(q,('doggie-house/'+q.relative_to(ROOT).as_posix()))

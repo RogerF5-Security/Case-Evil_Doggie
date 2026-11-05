@@ -1,24 +1,14 @@
-# Changelog
+# Publicaciones
 
-## 2.0.0-rc1 - 2026-11-04
+## 1.0.0 - 2026-11-05
 
-Revisión a partir del prototipo físico de RogerF5, preparada para compartir con Faraday.
+Primera publicación comunitaria de Doggie House, una carcasa para cuidar EvilDoggie.
 
-- Sustituye M2,5 × 25 y tuercas por cuatro pestañas PETG liberables.
-- Elimina agujeros de tornillos y todos los textos exteriores.
-- Conserva apoyos de PCB; añade pines de centrado de Ø 2,5 mm.
-- Amplía el USB-C y rebaja 2 mm su borde inferior; alivio mayor para el cable.
-- Añade RogerF5 grabado por dentro, con muestra de impresión.
-- Pasa de 5 a 14 ranuras posteriores y añade 8 ranuras laterales pasantes.
-- Añade muestras reales de cierre y USB, guía PDF, documentación ES/EN,
-  visor offline regenerable, comprobaciones automáticas y flujos para GitHub.
-- Conserva la ventana del perro y la alternativa de acceso directo a botones.
+- STL y disposiciones 3MF para la tapa con pulsadores cautivos y la alternativa de acceso directo.
+- Marco que mantiene visibles el perro y los LED, cierre sin tornillos y acceso a conexiones y controles.
+- Muestras de cierre y USB, plantillas de ajuste y ventana transparente opcional.
+- Guías de impresión, ensamblaje y mantenimiento en español e inglés; PDF ilustrado.
+- Sitio GitHub Pages con historia, descargas, montaje y visor 3D HTML sin dependencias externas.
+- Modelado en Kranken Tres D, a partir del EvilDoggie regalado por los amigos de Faraday en EKOparty 2026, Argentina.
 
-Pendiente: validar los cambios en la nueva impresión. No reutilizar mitades v1.
-
-## 1.0 - 2026-10-24
-
-Primer modelo de prueba: marco abierto para el perro, puertos, palanca y
-dos botones cautivos. El prototipo reveló poco espacio bajo USB, letras poco
-legibles, tornillos difíciles de conseguir y necesidad de ventilación adicional.
-Las fotos de esta impresión están en `docs/photos/`.
+La edición pública 1.0.0 conserva sin cambios los modelos existentes y su revisión interna de taller `2.0.0-rc1`. Las comprobaciones digitales están en `docs/validation.json`. El ajuste físico de la geometría compartida se registra por separado en `docs/RELEASE_CHECKLIST.md`.
