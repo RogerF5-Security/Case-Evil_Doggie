@@ -78,7 +78,7 @@ El visor HTML permite girar, acercar y ver el frente, controles, interior y desp
 
 ## Créditos y licencia
 
-- Modelado y trabajo de taller: **Kraken Tres D** (RogerF5).
+- Modelado y trabajo de taller: [**Kraken Tres D**](https://www.tiktok.com/@kraken.tres.d), propietario: **RogerF5**.
 - Hardware, firmware e ilustración original: [Faraday / Kalpa](https://github.com/infobyte/doggie).
 - Carcasa y documentación: [licencia MIT](LICENSE). Atribuciones de terceros en [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 

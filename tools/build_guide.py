@@ -43,7 +43,7 @@ for name,x in [('front.png',55),('rear.png',825)]:
     im=Image.open(IMAGES/name).convert('RGB')
     im=ImageOps.contain(im,(720,610),Image.Resampling.LANCZOS)
     cover.paste(im,(x+(720-im.width)//2,205+(610-im.height)//2))
-draw.text((82,866),'KRANKEN TRES D / PARA LA COMUNIDAD',
+draw.text((82,866),'KRAKEN TRES D / PARA LA COMUNIDAD',
     font=ImageFont.truetype(font_file(True),23),fill=ORANGE)
 draw.text((82,916),'Primera edición 1.0.0 · Ilustraciones CAD · Hardware original: Faraday / Kalpa',
     font=ImageFont.truetype(font_file(),21),fill=MUTED)
@@ -79,7 +79,7 @@ page('La historia / edición comunitaria 1.0.0','Una casa para EvilDoggie.')
 image('cover.png',510,315)
 story.append(Spacer(1,18))
 para('En la <b>EKOparty 2026, en Argentina</b>, los amigos de <b>Faraday</b> nos regalaron un EvilDoggie. Al regresar a Guatemala, nos quedó una idea: un hardware tan bonito debía estar protegido.')
-para('Lo trabajamos en el taller de <b>Kranken Tres D</b> y modelamos esta carcasa para cuidar la placa sin esconder al perro ni perder acceso a las conexiones. Compartimos los archivos para que cualquiera pueda imprimirla, ensamblarla y aportar mejoras.')
+para('Lo trabajamos en el taller de <b>Kraken Tres D</b> y modelamos esta carcasa para cuidar la placa sin esconder al perro ni perder acceso a las conexiones. Compartimos los archivos para que cualquiera pueda imprimirla, ensamblarla y aportar mejoras.')
 para('Gracias a los amigos de Faraday por el regalo que dio origen al proyecto y a la comunidad por seguir construyendo y compartiendo.')
 para('Carcasa de 80 × 110 × 27,8 mm; PCB de referencia de 70 × 100 × 2 mm. Cuatro pestañas liberables, sin tornillos. Ventana transparente de 1 mm opcional.','DHSmall')
 story.append(PageBreak())
@@ -129,7 +129,7 @@ for s in [
     para('• '+s)
 para('Estado del diseño','DHHeading')
 para('Primera publicación comunitaria 1.0.0. Los STL y 3MF conservan su geometría y su revisión interna de taller 2.0.0-rc1. Las comprobaciones digitales están documentadas; USB, cierre PETG y controles necesitan verificarse en la impresión y placa reales. No hay ensayos de impacto, temperatura o fatiga. Las fotos del prototipo corresponden a una etapa anterior.','DHSmall')
-para('Modelado: Kranken Tres D y colaboradores. Hardware y arte originales: Faraday / Kalpa. Carcasa y documentación: MIT. Compartí fotos, material y ajuste en el repositorio.','DHSmall')
+para('Modelado: <link href="https://www.tiktok.com/@kraken.tres.d" color="#bc481b">Kraken Tres D</link>. Propietario: RogerF5. Colaboradores de Doggie House. Hardware y arte originales: Faraday / Kalpa. Carcasa y documentación: MIT. Compartí fotos, material y ajuste en el repositorio.','DHSmall')
 para('<link href="https://rogerf5-security.github.io/Case-Evil_Doggie/" color="#bc481b">Visor 3D, descargas y comunidad</link> · <link href="https://github.com/infobyte/doggie" color="#bc481b">Hardware original</link>','DHSmall')
 
 def furniture(c,doc):
@@ -137,13 +137,13 @@ def furniture(c,doc):
     c.setStrokeColor(colors.HexColor('#d9dddf'))
     c.line(42,42,w-42,42);c.setFont('DH',8)
     c.setFillColor(colors.HexColor(MUTED))
-    c.drawString(42,27,'DOGGIE HOUSE / Kranken Tres D / Edición comunitaria 1.0.0')
+    c.drawString(42,27,'DOGGIE HOUSE / Kraken Tres D / Edición comunitaria 1.0.0')
     c.drawRightString(w-42,27,str(doc.page));c.restoreState()
 
 dest=ROOT/'docs/GUIA_MONTAJE_ES.pdf'
 doc=SimpleDocTemplate(str(dest),pagesize=A4,rightMargin=42,leftMargin=42,
     topMargin=42,bottomMargin=58,title='Doggie House - Guía de ensamblaje',
-    author='Doggie House / Kranken Tres D',
+    author='Doggie House / Kraken Tres D',
     subject='Primera edición comunitaria: impresión, ensamblaje y mantenimiento')
 doc.build(story,onFirstPage=furniture,onLaterPages=furniture)
 print('Guide:',dest)

@@ -4,7 +4,7 @@
 
 [Español](../README.md) · [3D viewer and assembly](https://rogerf5-security.github.io/Case-Evil_Doggie/) · [STL files](../models/stl/) · [Assembly guide](ASSEMBLY_EN.md)
 
-At **EKOparty 2026 in Argentina**, our friends at **Faraday** gave us an EvilDoggie. Back in Guatemala, we took it to the **Kranken Tres D** workshop and designed a case to protect the board while keeping its artwork, LEDs, connectors and controls accessible.
+At **EKOparty 2026 in Argentina**, our friends at **Faraday** gave us an EvilDoggie. Back in Guatemala, we took it to the **Kraken Tres D** workshop and designed a case to protect the board while keeping its artwork, LEDs, connectors and controls accessible.
 
 This first community publication shares the printable files so anyone can build a little house for their EvilDoggie and help improve it. Thank you to Faraday for the gift that started this project, and to the community that keeps sharing tools and ideas.
 
@@ -46,4 +46,4 @@ The self-contained [HTML viewer](../viewer/index.html) also works offline in a W
 
 Share print photos, board revision, material and measured fit through issues or pull requests. See [contributing](../CONTRIBUTING.md) and [technical notes](DESIGN_NOTES.md).
 
-Case modelling: **Kranken Tres D** and Doggie House contributors. Original hardware and art: [Faraday / Kalpa](https://github.com/infobyte/doggie). Case and documentation: [MIT](../LICENSE); [third-party notices](../THIRD_PARTY_NOTICES.md).
+Case modelling: [**Kraken Tres D**](https://www.tiktok.com/@kraken.tres.d), owner: **RogerF5**, and Doggie House contributors. Original hardware and art: [Faraday / Kalpa](https://github.com/infobyte/doggie). Case and documentation: [MIT](../LICENSE); [third-party notices](../THIRD_PARTY_NOTICES.md).
