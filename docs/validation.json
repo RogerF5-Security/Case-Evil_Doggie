@@ -1,0 +1,191 @@
+{
+  "version": "2.0.0-rc1",
+  "status": "Digital checks passed; revised physical fit pending",
+  "source_sha256": "78a0e4b6bfd3c4729f3f9b670b2c147d11c16c5a57992a2ac95c32766f6d2530",
+  "meshes": [
+    {
+      "file": "01_front_frame.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        80.0,
+        110.0,
+        17.0
+      ],
+      "volume_cm3": 16.424
+    },
+    {
+      "file": "02_rear_cover.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        80.0,
+        110.0,
+        19.4
+      ],
+      "volume_cm3": 40.205
+    },
+    {
+      "file": "03_two_captive_buttons.stl",
+      "closed": true,
+      "solids": 2,
+      "dimensions_mm": [
+        18.0,
+        6.0,
+        18.75
+      ],
+      "volume_cm3": 0.516
+    },
+    {
+      "file": "04_rear_direct_access_optional.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        80.0,
+        110.0,
+        19.4
+      ],
+      "volume_cm3": 39.177
+    },
+    {
+      "file": "05_pcb_fit_template.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        80.0,
+        110.0,
+        1.2
+      ],
+      "volume_cm3": 3.01
+    },
+    {
+      "file": "06_controls_template.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        70.0,
+        35.0,
+        1.2
+      ],
+      "volume_cm3": 2.319
+    },
+    {
+      "file": "07_clearance_coupon.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        45.0,
+        15.0,
+        3.0
+      ],
+      "volume_cm3": 1.826
+    },
+    {
+      "file": "08_snap_test_front.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        9.0,
+        16.0,
+        17.0
+      ],
+      "volume_cm3": 0.747
+    },
+    {
+      "file": "09_snap_test_rear.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        9.0,
+        16.0,
+        19.4
+      ],
+      "volume_cm3": 1.313
+    },
+    {
+      "file": "10_usb_test_front.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        6.8,
+        27.0,
+        9.8
+      ],
+      "volume_cm3": 0.951
+    },
+    {
+      "file": "11_usb_test_rear.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        4.5,
+        27.0,
+        8.1
+      ],
+      "volume_cm3": 0.347
+    },
+    {
+      "file": "12_signature_test.stl",
+      "closed": true,
+      "solids": 1,
+      "dimensions_mm": [
+        34.0,
+        10.0,
+        2.4
+      ],
+      "volume_cm3": 0.784
+    }
+  ],
+  "dimensions_mm": [
+    80.0,
+    110.0,
+    27.799999999999997
+  ],
+  "derived": {
+    "pcb_dog_surface_z": 6.4,
+    "pcb_component_surface_z": 8.4,
+    "roof_inside_z": 25.4,
+    "usb_inner_bottom_z": 5.4,
+    "usb_correction_z": -2.0,
+    "usb_center_y": 35.0,
+    "snap_clearance_z": 0.25,
+    "snap_beam_free_length": 14.6,
+    "snap_beam_thickness": 1.2,
+    "signature_roof_remaining": 1.9
+  },
+  "ventilation": {
+    "roof_slots": 14,
+    "side_slots": 8,
+    "roof_open_area_mm2": 599.53,
+    "v1_roof_open_area_mm2": 243.99,
+    "roof_area_ratio": 2.457,
+    "sides_open_area_mm2": 242.22
+  },
+  "checks": {
+    "all_meshes_closed": true,
+    "stl_reimport": true,
+    "case_pcb_window_clear": true,
+    "plungers_clear": true,
+    "usb_lower_relief_clear": true,
+    "db9_clear": true,
+    "latch_free_tip_travel_clear": true,
+    "latch_retention_engagement": true,
+    "threemf_reimport": true,
+    "layout_within_230mm": true
+  },
+  "overlap_volumes_mm3": {
+    "frame_cover": 2.353672812205332e-14,
+    "frame_pcb": 3.2436211919520397e-15,
+    "cover_pcb": 0.0,
+    "frame_window": -1.1243339159000554e-14
+  },
+  "latch_retention_intersection_mm3": 4.319999992847449,
+  "not_verified": [
+    "Revised USB fit with real cable",
+    "PETG snap force and fatigue",
+    "Signature legibility on actual printer",
+    "Button actuation/preload",
+    "Thermal performance",
+    "Slicing and printing of v2"
+  ]
+}
